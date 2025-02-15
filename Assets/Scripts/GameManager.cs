@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     {
         if(Player != null)
         {
-            if (Player.transform.position.x < Camera.main.ScreenToWorldPoint(Vector3.zero).x - 1f)
+            if (Player.transform.position.x < Camera.main.ScreenToWorldPoint(Vector3.zero).x - 1f || Player.transform.position.y < Camera.main.ScreenToWorldPoint(Vector3.zero).y - 1f)
             {
                 GameOver();
             }
@@ -34,6 +34,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         // Vous pouvez charger une scène de game over ou afficher un écran de game over
-        SceneManager.LoadScene("SceneGameOver");
+        SceneManager.LoadScene(2);
     }
 }
